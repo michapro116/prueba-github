@@ -1,12 +1,167 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Prueba</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0b">
+  <meta name="description" content="AUREA — una demostración de diseño digital, movimiento y precisión.">
+  <title>AUREA — Diseño que permanece</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root{--bg:#090a0b;--panel:#101112;--ink:#f4f1ea;--muted:#a5a39e;--gold:#c9a96e;--line:rgba(244,241,234,.14);--serif:Georgia,'Times New Roman',serif}
+    *{box-sizing:border-box}html{scroll-behavior:smooth}body{margin:0;background:var(--bg);color:var(--ink);font-family:'DM Sans',sans-serif;overflow-x:hidden}a{color:inherit;text-decoration:none}button{font:inherit}
+    .grain{position:fixed;inset:0;pointer-events:none;z-index:20;opacity:.045;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 180 180' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.5'/%3E%3C/svg%3E")}
+    .wrap{width:min(1240px,calc(100% - 64px));margin:auto}.nav{height:92px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid var(--line);position:relative;z-index:10}.brand{display:flex;align-items:center;gap:12px;font:700 18px Manrope,sans-serif;letter-spacing:.28em}.brand-mark{width:30px;height:30px;border:1px solid var(--gold);border-radius:50%;display:grid;place-items:center;color:var(--gold);font:16px var(--serif);letter-spacing:0}.nav-links{display:flex;gap:34px;color:#c6c3bc;font-size:12px}.nav-links a{transition:color .25s}.nav-links a:hover{color:var(--gold)}.nav-cta{font-size:12px;border:1px solid rgba(201,169,110,.7);border-radius:99px;padding:13px 18px;color:var(--ink);transition:.25s}.nav-cta:hover{background:var(--gold);color:#111}
+    .hero{min-height:690px;position:relative;display:grid;grid-template-columns: .93fr 1.07fr;align-items:center;padding:68px 0 74px;isolation:isolate}.hero:before{content:"";position:absolute;z-index:-2;inset:0;background:radial-gradient(ellipse at 72% 48%,rgba(201,169,110,.13),transparent 39%),radial-gradient(ellipse at 18% 40%,rgba(255,255,255,.045),transparent 40%)}.hero-copy{position:relative;z-index:2;padding-bottom:14px}.eyebrow{font-size:10px;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);font-weight:700;display:flex;align-items:center;gap:12px}.eyebrow:before{content:"";width:28px;height:1px;background:var(--gold)}h1{font:500 clamp(46px,6.3vw,88px)/.99 Manrope,sans-serif;letter-spacing:-.075em;margin:25px 0 24px;max-width:650px}h1 em{font-family:var(--serif);font-weight:400;color:var(--gold);letter-spacing:-.055em}.lead{max-width:430px;color:#aaa9a4;font-size:15px;line-height:1.8}.actions{display:flex;gap:12px;align-items:center;margin-top:32px;flex-wrap:wrap}.btn{border:1px solid var(--line);border-radius:99px;padding:14px 19px;font-size:12px;display:inline-flex;align-items:center;gap:22px;transition:all .25s;cursor:pointer}.btn.primary{background:var(--ink);color:#111;border-color:var(--ink)}.btn.primary:hover{background:var(--gold);border-color:var(--gold)}.btn.ghost:hover{border-color:var(--gold);color:var(--gold)}.metrics{display:flex;gap:36px;margin-top:62px}.metric strong{display:block;font:500 25px Manrope;letter-spacing:-.05em}.metric span{display:block;color:#85847f;font-size:10px;margin-top:6px;letter-spacing:.04em}
+    .stage{height:530px;position:relative;min-width:0;cursor:grab;touch-action:pan-y}.stage:active{cursor:grabbing}#scene{position:absolute;inset:0;width:100%;height:100%;display:block}.stage-note{position:absolute;bottom:22px;left:50%;transform:translateX(-50%);font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#8f8d86;white-space:nowrap;display:flex;gap:10px;align-items:center;pointer-events:none}.stage-note b{font-size:17px;color:var(--gold);font-weight:400}.orb-label{position:absolute;top:17%;right:4%;font-size:9px;letter-spacing:.22em;text-transform:uppercase;color:#88867f;writing-mode:vertical-rl}.stage-index{position:absolute;bottom:18%;right:0;color:var(--gold);font:italic 13px var(--serif)}
+    .intro{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:28px 0;display:grid;grid-template-columns:1fr 1fr;gap:50px;align-items:center}.intro p{color:#aaa9a4;line-height:1.8;font-size:13px;max-width:510px;margin:0}.intro .smallcap{font-size:10px;color:var(--gold);letter-spacing:.22em;text-transform:uppercase}
+    .section{padding:110px 0}.section-head{display:flex;align-items:end;justify-content:space-between;gap:30px;margin-bottom:42px}.section h2{font:500 clamp(34px,4.5vw,58px)/1.08 Manrope;letter-spacing:-.065em;margin:17px 0 0;max-width:580px}.section h2 em{font-family:var(--serif);font-weight:400;color:var(--gold)}.section-head p{max-width:330px;color:var(--muted);font-size:13px;line-height:1.8;margin:0 0 4px}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}.card{border:1px solid var(--line);min-height:260px;padding:28px;position:relative;overflow:hidden;transition:transform .35s,border-color .35s;background:linear-gradient(145deg,rgba(255,255,255,.025),transparent 55%)}.card:hover{transform:translateY(-5px);border-color:rgba(201,169,110,.55)}.card-no{font:italic 13px var(--serif);color:var(--gold)}.card-icon{width:42px;height:42px;border:1px solid rgba(201,169,110,.45);border-radius:50%;display:grid;place-items:center;color:var(--gold);font-size:17px;margin:33px 0 22px}.card h3{font:500 19px Manrope;margin:0 0 10px;letter-spacing:-.035em}.card p{font-size:12px;line-height:1.8;color:var(--muted);max-width:290px;margin:0}.card-arrow{position:absolute;right:27px;bottom:26px;color:var(--gold);font-size:20px}
+    .statement{background:#e9e5dc;color:#121313;padding:90px 0}.statement .eyebrow{color:#8b6d38}.statement .eyebrow:before{background:#8b6d38}.statement-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:70px;align-items:center}.statement h2{font:500 clamp(36px,5.5vw,68px)/1.03 Manrope;letter-spacing:-.075em;margin:22px 0 0}.statement h2 em{font-family:var(--serif);font-weight:400;color:#967442}.statement p{font-size:14px;line-height:1.9;color:#555650;max-width:430px}.statement .btn{border-color:#222;color:#222;margin-top:12px}.statement .btn:hover{background:#111;color:#fff}
+    .footer{padding:42px 0 30px}.footer-top{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-bottom:36px;border-bottom:1px solid var(--line)}.footer .brand{font-size:14px}.footer-note{color:#77756f;font-size:11px}.footer-bottom{display:flex;justify-content:space-between;color:#77756f;font-size:10px;padding-top:22px}.reveal{opacity:0;transform:translateY(22px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:translateY(0)}
+    @media(max-width:900px){.wrap{width:min(100% - 40px,700px)}.nav{height:74px}.nav-links{display:none}.hero{grid-template-columns:1fr;padding:66px 0 30px;min-height:auto}.hero-copy{max-width:640px}.stage{height:430px;margin-top:4px}.metrics{margin-top:42px}.intro{grid-template-columns:1fr;gap:12px;padding:25px 0}.section{padding:78px 0}.section-head{display:block}.section-head p{margin-top:20px}.cards{grid-template-columns:1fr}.card{min-height:220px}.card-icon{margin-top:24px}.statement-grid{grid-template-columns:1fr;gap:20px}.statement{padding:70px 0}.statement p{margin-bottom:10px}}
+    @media(max-width:520px){.wrap{width:calc(100% - 36px)}.nav-cta{padding:11px 12px;font-size:10px}.brand{font-size:14px;letter-spacing:.2em}.brand-mark{width:26px;height:26px}.hero{padding-top:50px}h1{font-size:clamp(43px,13vw,64px)}.lead{font-size:13px}.actions{gap:9px}.btn{padding:13px 15px;font-size:11px}.metrics{gap:18px;justify-content:space-between}.metric strong{font-size:21px}.metric span{font-size:9px}.stage{height:330px;margin:0 -10px}.orb-label{right:2%;top:12%;font-size:8px}.stage-note{font-size:8px;bottom:12px}.section{padding:65px 0}.section h2{font-size:39px}.statement h2{font-size:43px}.footer-top{align-items:flex-start;flex-direction:column}.footer-bottom{gap:12px;flex-wrap:wrap}}
+    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important;animation:none!important}.reveal{opacity:1;transform:none}}
+  </style>
 </head>
 <body>
-    <h1>GitHub funciona</h1>
-    <p>Esta es una prueba.</p>
+<div class="grain"></div>
+<header class="wrap nav">
+  <a class="brand" href="#" aria-label="AUREA, inicio"><span class="brand-mark">A</span><span>AUREA</span></a>
+  <nav class="nav-links" aria-label="Navegación principal"><a href="#filosofia">Filosofía</a><a href="#servicios">Servicios</a><a href="#proceso">Proceso</a></nav>
+  <a class="nav-cta" href="#contacto">Hablemos <span aria-hidden="true">↗</span></a>
+</header>
+<main>
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <div class="eyebrow">Estudio independiente · Diseño digital</div>
+      <h1>Menos ruido.<br>Más <em>presencia.</em></h1>
+      <p class="lead">Creamos experiencias digitales donde la precisión se encuentra con la emoción. Una forma más consciente de presentar lo extraordinario.</p>
+      <div class="actions"><a class="btn primary" href="#servicios">Explorar el estudio <span aria-hidden="true">↗</span></a><a class="btn ghost" href="#filosofia">Nuestra filosofía <span aria-hidden="true">↓</span></a></div>
+      <div class="metrics"><div class="metric"><strong>01—01</strong><span>Intención en cada detalle</span></div><div class="metric"><strong>∞</strong><span>Posibilidades creativas</span></div><div class="metric"><strong>100%</strong><span>Diseño con propósito</span></div></div>
+    </div>
+    <div class="stage" id="stage" aria-label="Objeto 3D interactivo. Arrastra para girar.">
+      <canvas id="scene"></canvas><div class="orb-label">Forma · Luz · Materia</div><div class="stage-index">No. 001</div>
+      <div class="stage-note"><b>↔</b> Arrastra para explorar la forma</div>
+    </div>
+  </section>
+  <section class="wrap intro reveal" id="filosofia">
+    <div class="smallcap">Una filosofía de claridad</div>
+    <p>La sofisticación no necesita levantar la voz. Trabajamos con contraste, ritmo y espacio para que cada elemento tenga una razón de existir y cada interacción se sienta natural.</p>
+  </section>
+  <section class="wrap section" id="servicios">
+    <div class="section-head reveal"><div><div class="eyebrow">Lo que hacemos</div><h2>Diseñado para sentirse.<br><em>Construido para funcionar.</em></h2></div><p>Una identidad digital sólida nace del equilibrio entre belleza, velocidad y una experiencia que se entiende sin esfuerzo.</p></div>
+    <div class="cards">
+      <article class="card reveal"><span class="card-no">01 / Estrategia</span><div class="card-icon">✳</div><h3>Dirección visual</h3><p>Una identidad coherente: tono, composición, color y tipografía alineados con lo que tu marca representa.</p><span class="card-arrow">↗</span></article>
+      <article class="card reveal"><span class="card-no">02 / Experiencia</span><div class="card-icon">◌</div><h3>Interacción con intención</h3><p>Movimiento sutil, profundidad y detalles que orientan. Animación que aporta significado, no distracción.</p><span class="card-arrow">↗</span></article>
+      <article class="card reveal"><span class="card-no">03 / Tecnología</span><div class="card-icon">⌘</div><h3>Rendimiento real</h3><p>Interfaces adaptables, accesibles y cuidadas para que la experiencia siga siendo fluida en pantallas pequeñas.</p><span class="card-arrow">↗</span></article>
+    </div>
+  </section>
+  <section class="statement" id="proceso"><div class="wrap statement-grid reveal"><div><div class="eyebrow">El principio detrás de cada proyecto</div><h2>La elegancia está<br>en lo que <em>permanece.</em></h2></div><div><p>No diseñamos para perseguir tendencias. Diseñamos para que el mensaje sea claro, el recorrido sea intuitivo y los detalles sigan teniendo sentido con el tiempo.</p><a class="btn" href="#contacto">Conocer nuestro enfoque <span aria-hidden="true">↗</span></a></div></div></section>
+  <footer class="wrap footer" id="contacto"><div class="footer-top"><a class="brand" href="#"><span class="brand-mark">A</span><span>AUREA</span></a><div class="footer-note">Una demostración de diseño web experimental.</div><a class="nav-cta" href="mailto:hola@aurea.example">Iniciar una conversación ↗</a></div><div class="footer-bottom"><span>© 2026 AUREA — Concepto de demostración</span><span>Diseñado con intención. Hecho para explorar.</span></div></footer>
+</main>
+<script type="module">
+  import * as THREE from 'https://cdn.jsdelivr.net/npm/three@0.164.1/build/three.module.js';
+
+  const canvas = document.querySelector('#scene');
+  const stage = document.querySelector('#stage');
+  const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let renderer, scene, camera, sculpture, halo, particles, raf = 0;
+  let targetX = 0, targetY = 0, dragging = false, startX = 0, startY = 0, baseX = 0, baseY = 0;
+  let pointerX = 0, pointerY = 0;
+  const clock = new THREE.Clock();
+
+  function makeGoldMaterial() {
+    return new THREE.MeshStandardMaterial({ color: 0xc9a96e, metalness: .88, roughness: .22 });
+  }
+
+  function init() {
+    try {
+      renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: window.devicePixelRatio < 2, powerPreference: 'low-power' });
+      renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.7));
+      renderer.setSize(stage.clientWidth, stage.clientHeight, false);
+      renderer.outputColorSpace = THREE.SRGBColorSpace;
+      renderer.toneMapping = THREE.ACESFilmicToneMapping;
+      renderer.toneMappingExposure = 1.08;
+      scene = new THREE.Scene();
+      camera = new THREE.PerspectiveCamera(34, stage.clientWidth / stage.clientHeight, .1, 100);
+      camera.position.set(0, 0, 7.7);
+
+      scene.add(new THREE.AmbientLight(0xffffff, 1.25));
+      const key = new THREE.DirectionalLight(0xffe2ac, 3.2); key.position.set(4, 5, 5); scene.add(key);
+      const rim = new THREE.PointLight(0xc9a96e, 28, 20); rim.position.set(-4, 1, -2); scene.add(rim);
+      const fill = new THREE.PointLight(0xffffff, 8, 16); fill.position.set(2, -3, 4); scene.add(fill);
+
+      sculpture = new THREE.Group();
+      const gold = makeGoldMaterial();
+      const dark = new THREE.MeshStandardMaterial({ color: 0x25231f, metalness: .78, roughness: .3 });
+      // Interlocking torus forms create a lightweight, procedural 3D sculpture—no model download required.
+      const ringA = new THREE.Mesh(new THREE.TorusKnotGeometry(1.05, .19, 180, 20, 2, 3), gold);
+      ringA.rotation.set(.35, .25, .15); sculpture.add(ringA);
+      const ringB = new THREE.Mesh(new THREE.TorusGeometry(.82, .065, 16, 120), dark);
+      ringB.rotation.set(1.1, .4, .8); sculpture.add(ringB);
+      const ringC = new THREE.Mesh(new THREE.TorusGeometry(1.22, .027, 12, 140), gold);
+      ringC.rotation.set(.3, 1.05, .45); sculpture.add(ringC);
+      const core = new THREE.Mesh(new THREE.IcosahedronGeometry(.22, 1), new THREE.MeshStandardMaterial({color:0xf1d7a1,metalness:.9,roughness:.15}));
+      sculpture.add(core);
+      scene.add(sculpture);
+
+      halo = new THREE.Mesh(new THREE.TorusGeometry(1.72, .004, 6, 160), new THREE.MeshBasicMaterial({color:0xc9a96e,transparent:true,opacity:.38}));
+      halo.rotation.x = 1.25; sculpture.add(halo);
+
+      const particleGeo = new THREE.BufferGeometry();
+      const positions = [];
+      for (let i=0;i<230;i++) {
+        const r = 2.0 + Math.random()*1.3, a = Math.random()*Math.PI*2, y = (Math.random()-.5)*4.5;
+        positions.push(Math.cos(a)*r,y,Math.sin(a)*r);
+      }
+      particleGeo.setAttribute('position',new THREE.Float32BufferAttribute(positions,3));
+      particles = new THREE.Points(particleGeo,new THREE.PointsMaterial({color:0xd9c08d,size:.018,transparent:true,opacity:.6}));
+      scene.add(particles);
+      resize(); observe();
+      if ('IntersectionObserver' in window) {
+        const io = new IntersectionObserver(entries => { if(entries[0].isIntersecting) start(); else stop(); }, {threshold:.02});
+        io.observe(stage);
+      } else start();
+    } catch (e) {
+      stage.classList.add('no-webgl');
+      stage.insertAdjacentHTML('beforeend','<p style="position:absolute;inset:40% 10% auto;text-align:center;color:#c9a96e;font-size:13px">Tu navegador no pudo iniciar la escena 3D. Prueba con un navegador actualizado.</p>');
+      console.error('No se pudo iniciar WebGL:', e);
+    }
+  }
+
+  function resize() {
+    if (!renderer || !camera) return;
+    const w = Math.max(1, stage.clientWidth), h = Math.max(1, stage.clientHeight);
+    renderer.setSize(w,h,false); camera.aspect=w/h; camera.updateProjectionMatrix();
+  }
+  function render() {
+    raf = requestAnimationFrame(render);
+    const t = clock.getElapsedTime();
+    if (sculpture) {
+      if (!dragging && !reduceMotion) { targetY += .0025; targetX += (pointerY*.08-targetX)*.018; }
+      sculpture.rotation.y += (targetY - sculpture.rotation.y)*.08;
+      sculpture.rotation.x += (targetX - sculpture.rotation.x)*.08;
+      sculpture.position.y = Math.sin(t*.7)*.055;
+      if (halo) halo.rotation.z = t*.035;
+      if (particles && !reduceMotion) particles.rotation.y = t*.012;
+    }
+    renderer.render(scene,camera);
+  }
+  function start(){ if(!raf && renderer) render(); }
+  function stop(){ if(raf){cancelAnimationFrame(raf);raf=0;} }
+  stage.addEventListener('pointerdown',e=>{dragging=true;startX=e.clientX;startY=e.clientY;baseX=targetX;baseY=targetY;stage.setPointerCapture?.(e.pointerId)});
+  stage.addEventListener('pointermove',e=>{
+    const r=stage.getBoundingClientRect(); pointerX=(e.clientX-r.left)/r.width-.5; pointerY=(e.clientY-r.top)/r.height-.5;
+    if(dragging){targetY=baseY+(e.clientX-startX)*.009;targetX=Math.max(-1.2,Math.min(1.2,baseX+(e.clientY-startY)*.007));}
+  });
+  const endDrag=()=>{dragging=false};stage.addEventListener('pointerup',endDrag);stage.addEventListener('pointercancel',endDrag);stage.addEventListener('pointerleave',()=>{if(!dragging){pointerX=0;pointerY=0}});
+  window.addEventListener('resize',resize,{passive:true});
+  init();
+
+  const revealObserver = new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');revealObserver.unobserve(entry.target)}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>revealObserver.observe(el));
+</script>
 </body>
 </html>
