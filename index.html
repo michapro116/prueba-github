@@ -1,149 +1,130 @@
 <!doctype html>
 <html lang="es">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#29231f">
-  <meta name="description" content="Descanso Hogar: colchones, somieres y asesoría para elegir el descanso ideal en Santa Cruz de la Sierra.">
-  <title>Descanso Hogar | Tu descanso comienza aquí</title>
-  <style>
-    :root{--ink:#29231f;--muted:#6f675f;--cream:#f5f0e8;--paper:#fffdf9;--sand:#d9c3a2;--gold:#a9824d;--line:#e6ded2;--radius:20px;--shadow:0 18px 50px rgba(41,35,31,.10)}
-    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:88px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}img{display:block;max-width:100%}button,a{ -webkit-tap-highlight-color:transparent}button{font:inherit}.wrap{width:min(1140px,calc(100% - 40px));margin-inline:auto}.topbar{background:var(--ink);color:#f8f3eb;font-size:.82rem}.topbar .wrap{display:flex;justify-content:space-between;gap:12px;padding:9px 0}.header{position:sticky;top:0;z-index:20;background:rgba(255,253,249,.94);backdrop-filter:blur(14px);border-bottom:1px solid rgba(230,222,210,.8)}.nav{min-height:76px;display:flex;align-items:center;justify-content:space-between;gap:24px}.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:-.04em;font-size:1.15rem}.brand-mark{width:42px;height:42px;display:grid;place-items:center;border-radius:14px;background:var(--ink);color:var(--sand);font-size:1.1rem}.brand small{display:block;color:var(--muted);font-size:.65rem;letter-spacing:.13em;text-transform:uppercase;font-weight:650;margin-top:-3px}.navlinks{display:flex;align-items:center;gap:25px;font-size:.91rem;color:#4f4841}.navlinks a:hover{color:var(--gold)}.btn{display:inline-flex;align-items:center;justify-content:center;gap:9px;border:1px solid transparent;border-radius:999px;padding:13px 21px;font-weight:750;font-size:.92rem;cursor:pointer;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn-dark{background:var(--ink);color:white}.btn-dark:hover{background:#44372e}.btn-light{border-color:#cfc2b1;background:transparent}.btn-light:hover{background:#fff}.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:1.2rem}.hero{padding:64px 0 72px;background:radial-gradient(ellipse at 75% 22%,#e9dcc9 0,transparent 36%),linear-gradient(135deg,#f8f3eb,#eee4d6)}.hero-grid{display:grid;grid-template-columns:1fr .94fr;align-items:center;gap:56px}.eyebrow{display:inline-flex;align-items:center;gap:8px;color:#84643d;text-transform:uppercase;font-size:.76rem;letter-spacing:.15em;font-weight:800}.eyebrow:before{content:"";width:25px;height:1px;background:currentColor}.hero h1{font-family:Georgia,"Times New Roman",serif;font-weight:500;letter-spacing:-.055em;font-size:clamp(3rem,5.8vw,5.5rem);line-height:.99;margin:20px 0}.hero h1 em{font-weight:500;color:#987348}.hero p{font-size:1.08rem;max-width:540px;color:#62594f;margin:0 0 27px}.actions{display:flex;flex-wrap:wrap;gap:12px}.trust{display:flex;align-items:center;gap:13px;margin-top:30px;color:#6c6258;font-size:.88rem}.trust-icon{width:38px;height:38px;border-radius:50%;display:grid;place-items:center;background:#fff9f0;border:1px solid #e4d5bf}.hero-photo{position:relative;min-width:0}.hero-photo img{height:510px;width:100%;object-fit:cover;border-radius:48% 48% 22px 22px;box-shadow:var(--shadow)}.photo-note{position:absolute;left:-24px;bottom:25px;max-width:220px;padding:17px 20px;background:var(--paper);border-radius:16px;box-shadow:var(--shadow);font-size:.88rem}.photo-note strong{display:block;font-family:Georgia,serif;font-size:1.2rem;font-weight:500}.section{padding:84px 0}.section-head{max-width:660px;margin:0 auto 40px;text-align:center}.section-head .eyebrow{justify-content:center}.section h2{font-family:Georgia,"Times New Roman",serif;font-size:clamp(2.2rem,4vw,3.4rem);line-height:1.08;letter-spacing:-.04em;font-weight:500;margin:14px 0}.section-head p{color:var(--muted);margin:0}.features{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.feature{padding:28px;border:1px solid var(--line);border-radius:var(--radius);background:#fff}.feature-icon{width:48px;height:48px;border-radius:15px;display:grid;place-items:center;background:var(--cream);font-size:1.3rem}.feature h3{margin:17px 0 7px;font-size:1.12rem}.feature p{margin:0;color:var(--muted);font-size:.95rem}.products{background:var(--cream)}.product-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.product-card{overflow:hidden;border-radius:var(--radius);background:var(--paper);border:1px solid #e5dbce}.product-card img{height:235px;width:100%;object-fit:cover;transition:transform .4s}.product-card:hover img{transform:scale(1.035)}.product-content{padding:22px}.tag{font-size:.72rem;text-transform:uppercase;letter-spacing:.12em;font-weight:800;color:#987348}.product-content h3{margin:7px 0;font-size:1.25rem}.product-content p{color:var(--muted);font-size:.92rem;margin:0 0 16px}.text-link{font-weight:800;font-size:.9rem;color:#795a35}.text-link span{margin-left:5px}.about-grid{display:grid;grid-template-columns:.9fr 1.1fr;align-items:center;gap:60px}.about-img{width:100%;height:430px;object-fit:cover;border-radius:var(--radius)}.about-copy h2{margin-top:12px}.about-copy p{color:var(--muted)}.checklist{list-style:none;padding:0;margin:23px 0;display:grid;gap:12px}.checklist li{display:flex;gap:10px;align-items:flex-start}.check{color:#8a6b42;font-weight:900}.quote{background:var(--ink);color:#fff7eb;padding:72px 0}.quote-inner{text-align:center;max-width:780px;margin:auto}.quote h2{font-family:Georgia,serif;font-size:clamp(2.1rem,4vw,3.2rem);font-weight:500;line-height:1.12;margin:12px 0 18px}.quote p{color:#d7cabe}.faq-grid{max-width:800px;margin:auto;display:grid;gap:12px}.faq-item{border:1px solid var(--line);border-radius:14px;padding:0 20px;background:white}.faq-item summary{cursor:pointer;list-style:none;font-weight:750;padding:18px 30px 18px 0;position:relative}.faq-item summary::-webkit-details-marker{display:none}.faq-item summary:after{content:"+";position:absolute;right:0;top:16px;font-size:1.35rem;color:var(--gold)}.faq-item[open] summary:after{content:"−"}.faq-item p{margin:0;padding:0 0 18px;color:var(--muted)}.contact{background:#f7f2ea}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:35px;align-items:stretch}.contact-panel{background:var(--ink);color:#fff7eb;padding:35px;border-radius:var(--radius)}.contact-panel h2{font-size:2.4rem;margin-top:10px}.contact-panel p{color:#d8cfc3}.contact-list{display:grid;gap:17px;margin:25px 0}.contact-row{display:flex;gap:13px;align-items:flex-start}.contact-row b{display:block}.contact-row span{color:#d8cfc3;font-size:.92rem}.contact-form{padding:34px;background:white;border:1px solid var(--line);border-radius:var(--radius)}.contact-form h3{margin:0 0 6px;font-size:1.35rem}.contact-form>p{color:var(--muted);margin:0 0 22px}.field{display:grid;gap:6px;margin-bottom:15px}.field label{font-size:.86rem;font-weight:750}.field input,.field textarea,.field select{width:100%;padding:12px 14px;border:1px solid #dcd2c6;border-radius:11px;background:#fffdf9;color:var(--ink);font:inherit}.field textarea{min-height:100px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid #c8a879;outline-offset:1px}.contact-form .btn{width:100%}.form-note{font-size:.8rem;color:var(--muted);margin-top:10px}.footer{background:#211c18;color:#f7f0e6;padding:34px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:22px}.footer p{color:#c7baaa;font-size:.85rem;margin:6px 0 0}.footer-links{display:flex;gap:17px;flex-wrap:wrap;font-size:.88rem}.footer-links a:hover{color:var(--sand)}.wa-float{position:fixed;right:20px;bottom:20px;z-index:30;width:58px;height:58px;border-radius:50%;background:#218c55;color:white;display:grid;place-items:center;box-shadow:0 8px 25px #0003;font-size:1.55rem;border:3px solid #fff}.wa-float:hover{transform:translateY(-3px)}.toast{position:fixed;left:50%;bottom:22px;transform:translate(-50%,20px);opacity:0;pointer-events:none;background:var(--ink);color:white;padding:12px 18px;border-radius:999px;z-index:50;transition:.25s;font-size:.9rem}.toast.show{opacity:1;transform:translate(-50%,0)}
-    @media(max-width:850px){.navlinks{gap:15px}.nav-cta{display:none}.hero-grid{gap:28px}.hero-photo img{height:420px}.photo-note{left:-12px}.about-grid{gap:32px}.contact-grid{gap:20px}}
-    @media(max-width:680px){.wrap{width:min(100% - 30px,540px)}.topbar .wrap{justify-content:center;text-align:center}.topbar .wrap span:last-child{display:none}.nav{min-height:68px}.menu-toggle{display:block}.navlinks{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:14px 22px 22px;border-bottom:1px solid var(--line);box-shadow:0 15px 25px #0000000d;flex-direction:column;align-items:stretch;gap:0}.navlinks.open{display:flex}.navlinks a{padding:12px 3px;border-bottom:1px solid #f0e9df}.navlinks a:last-child{border:0}.hero{padding:43px 0 50px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero h1{font-size:clamp(3rem,14vw,4.3rem)}.hero p{font-size:1rem}.hero-photo{padding-left:14px;padding-bottom:12px}.hero-photo img{height:370px;border-radius:48% 48% 18px 18px}.photo-note{left:0;bottom:0}.section{padding:62px 0}.features,.product-grid{grid-template-columns:1fr}.feature{padding:24px}.product-card img{height:250px}.about-grid,.contact-grid{grid-template-columns:1fr}.about-img{height:310px}.about-copy h2{font-size:2.5rem}.quote{padding:56px 0}.contact-panel,.contact-form{padding:25px}.footer-inner{align-items:flex-start;flex-direction:column}.wa-float{right:14px;bottom:14px;width:54px;height:54px}}
-    @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
-  </style>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#142c2b">
+<meta name="description" content="ClimaListo: instalación, mantenimiento y reparación de aire acondicionado en Santa Cruz de la Sierra. Solicita una cotización por WhatsApp.">
+<title>ClimaListo | Aire acondicionado y mantenimiento</title>
+<style>
+:root{--ink:#142c2b;--ink2:#23413d;--mint:#d8f1e7;--mint2:#a9dfca;--paper:#fbfcf8;--muted:#63716c;--line:#dfe8e1;--lime:#d5f36b;--white:#fff;--r:22px;--shadow:0 20px 55px #102a2514}
+*{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;line-height:1.6}a{color:inherit;text-decoration:none}button,input,textarea,select{font:inherit}.wrap{width:min(1160px,calc(100% - 40px));margin:auto}.top{background:var(--ink);color:#e6f5ee;font-size:.82rem}.top .wrap{display:flex;justify-content:space-between;gap:15px;padding:8px 0}.header{position:sticky;top:0;z-index:20;background:#fbfcf8ed;backdrop-filter:blur(14px);border-bottom:1px solid var(--line)}.nav{display:flex;align-items:center;justify-content:space-between;gap:22px;min-height:78px}.brand{display:flex;align-items:center;gap:10px;font-weight:900;letter-spacing:-.04em;font-size:1.18rem}.logo{width:43px;height:43px;display:grid;place-items:center;border-radius:14px;background:var(--ink);color:var(--lime);font-weight:900}.brand small{display:block;font-size:.65rem;letter-spacing:.11em;text-transform:uppercase;color:var(--muted);margin-top:-4px}.links{display:flex;gap:23px;align-items:center;font-size:.91rem;color:#43534e}.links a:hover{color:#54866d}.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;border-radius:999px;padding:13px 19px;font-weight:800;cursor:pointer;transition:transform .18s,background .18s}.btn:hover{transform:translateY(-2px)}.btn-primary{background:var(--lime);color:var(--ink)}.btn-primary:hover{background:#c8e75c}.btn-outline{border:1px solid #aabbb2;background:transparent}.btn-outline:hover{background:white}.menu{display:none;background:transparent;border:1px solid var(--line);border-radius:12px;padding:9px 12px;font-size:1.15rem}.hero{padding:68px 0 78px;background:linear-gradient(120deg,#e9f5ee 0%,#f8faf5 56%,#d8f1e7 100%);overflow:hidden}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:58px;align-items:center}.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid #b8d8c8;border-radius:999px;padding:7px 12px;font-size:.78rem;font-weight:800;color:#315b4c;background:#f5fff9}.dot{width:8px;height:8px;background:#4caa7c;border-radius:50%}.hero h1{font-size:clamp(3rem,5.7vw,5.35rem);letter-spacing:-.065em;line-height:.99;margin:21px 0 20px;max-width:650px}.hero h1 span{color:#438566}.hero p{font-size:1.07rem;color:#52645c;max-width:560px;margin:0 0 25px}.actions{display:flex;gap:11px;flex-wrap:wrap}.micro{display:flex;align-items:center;gap:10px;margin-top:25px;font-size:.86rem;color:#5b6b64}.micro-icon{width:36px;height:36px;display:grid;place-items:center;border-radius:50%;background:white;border:1px solid var(--line)}.hero-visual{position:relative}.hero-visual img{width:100%;height:480px;object-fit:cover;border-radius:35% 18px 18px 18px;box-shadow:var(--shadow)}.float-card{position:absolute;left:-28px;bottom:22px;background:white;border:1px solid var(--line);border-radius:17px;padding:17px 20px;box-shadow:var(--shadow);max-width:230px;font-size:.86rem}.float-card strong{display:block;font-size:1.05rem;margin-bottom:3px}.trustbar{background:white;border-bottom:1px solid var(--line)}.trustgrid{display:grid;grid-template-columns:repeat(3,1fr);padding:23px 0;gap:18px}.trustitem{display:flex;gap:12px;align-items:center}.trustitem b{display:block;font-size:.93rem}.trustitem span{font-size:.82rem;color:var(--muted)}.trusticon{width:42px;height:42px;flex:none;display:grid;place-items:center;border-radius:13px;background:var(--mint);font-size:1.2rem}.section{padding:83px 0}.heading{max-width:700px;margin:0 auto 40px;text-align:center}.eyebrow{font-size:.76rem;font-weight:900;text-transform:uppercase;letter-spacing:.14em;color:#478064}.heading h2,.about h2,.contact-intro h2{font-size:clamp(2.25rem,4vw,3.45rem);letter-spacing:-.05em;line-height:1.06;margin:13px 0}.heading p{color:var(--muted);margin:0}.services{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.service{padding:27px;border:1px solid var(--line);border-radius:var(--r);background:white;box-shadow:0 6px 24px #132f2410}.service-icon{width:50px;height:50px;border-radius:15px;background:var(--mint);display:grid;place-items:center;font-size:1.4rem}.service h3{margin:17px 0 7px;font-size:1.15rem}.service p{color:var(--muted);font-size:.94rem;margin:0 0 17px}.inline-link{font-weight:850;color:#39785b;font-size:.91rem}.process{background:#edf6ef}.process-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:60px;align-items:center}.process-copy h2{font-size:clamp(2.3rem,4vw,3.3rem);letter-spacing:-.05em;line-height:1.08;margin:13px 0}.process-copy p{color:var(--muted)}.steps{display:grid;gap:12px}.step{display:flex;gap:16px;padding:19px;background:white;border:1px solid #dce9df;border-radius:17px}.step-num{flex:none;width:39px;height:39px;display:grid;place-items:center;border-radius:12px;background:var(--ink);color:var(--lime);font-weight:900}.step h3{font-size:1rem;margin:0 0 4px}.step p{font-size:.9rem;color:var(--muted);margin:0}.about-grid{display:grid;grid-template-columns:1fr 1fr;gap:54px;align-items:center}.about-img{width:100%;height:430px;object-fit:cover;border-radius:20px}.about p{color:var(--muted)}.checks{list-style:none;padding:0;display:grid;gap:11px;margin:23px 0}.checks li{display:flex;gap:10px}.check{color:#39815d;font-weight:950}.band{background:var(--ink);color:white;padding:70px 0}.band-inner{text-align:center;max-width:790px;margin:auto}.band h2{font-size:clamp(2.2rem,4vw,3.5rem);letter-spacing:-.05em;line-height:1.08;margin:14px 0}.band p{color:#c6d8ce;margin:0 auto 24px;max-width:600px}.faq{max-width:820px;margin:auto;display:grid;gap:12px}.faq details{background:white;border:1px solid var(--line);border-radius:14px;padding:0 20px}.faq summary{list-style:none;cursor:pointer;font-weight:800;padding:18px 28px 18px 0;position:relative}.faq summary::-webkit-details-marker{display:none}.faq summary:after{content:"+";position:absolute;right:0;color:#438566;font-size:1.3rem;top:14px}.faq details[open] summary:after{content:"−"}.faq details p{color:var(--muted);margin:0;padding:0 0 18px}.contact{background:#f0f6ef}.contact-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:22px}.contact-intro{background:var(--ink);color:white;border-radius:var(--r);padding:34px}.contact-intro p{color:#c8d8cf}.details{display:grid;gap:17px;margin:26px 0}.detail{display:flex;gap:12px}.detail .symbol{width:37px;height:37px;border-radius:12px;background:#294743;display:grid;place-items:center;flex:none}.detail b{display:block}.detail span:last-child{font-size:.9rem;color:#c8d8cf}.form{padding:32px;background:white;border:1px solid var(--line);border-radius:var(--r)}.form h3{margin:0 0 4px;font-size:1.35rem}.form>p{color:var(--muted);margin:0 0 20px}.field{display:grid;gap:6px;margin-bottom:14px}.field label{font-weight:800;font-size:.85rem}.field input,.field textarea,.field select{width:100%;padding:12px 13px;border:1px solid #d4e0d7;border-radius:11px;background:#fcfdfa;color:var(--ink)}.field textarea{min-height:94px;resize:vertical}.field input:focus,.field textarea:focus,.field select:focus{outline:2px solid #80bd9d;outline-offset:1px}.form .btn{width:100%}.note{font-size:.78rem;color:var(--muted);margin-top:10px}.footer{background:#0d201e;color:#eff8f1;padding:32px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;gap:20px}.footer p{color:#a9bdb2;font-size:.83rem;margin:5px 0 0}.footerlinks{display:flex;gap:16px;flex-wrap:wrap;font-size:.88rem}.footerlinks a:hover{color:var(--lime)}.wa-float{position:fixed;z-index:30;right:20px;bottom:20px;width:58px;height:58px;border-radius:50%;display:grid;place-items:center;background:#16844b;color:white;border:3px solid white;box-shadow:0 8px 24px #0003;font-size:1.55rem}.wa-float:hover{transform:translateY(-3px)}.toast{position:fixed;left:50%;bottom:20px;z-index:40;transform:translate(-50%,20px);opacity:0;background:var(--ink);color:white;padding:11px 16px;border-radius:999px;pointer-events:none;transition:.2s}.toast.show{opacity:1;transform:translate(-50%,0)}
+@media(max-width:850px){.links{gap:13px}.navcta{display:none}.hero-grid{gap:30px}.hero-visual img{height:420px}.process-grid{gap:30px}.about-grid{gap:30px}}
+@media(max-width:680px){.wrap{width:calc(100% - 30px)}.top .wrap{justify-content:center;text-align:center}.top .wrap span:last-child{display:none}.nav{min-height:68px}.menu{display:block}.links{display:none;position:absolute;left:0;right:0;top:100%;background:var(--paper);padding:12px 22px 20px;box-shadow:0 15px 22px #0000000d;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}.links.open{display:flex}.links a{padding:12px 3px;border-bottom:1px solid var(--line)}.links a:last-child{border:0}.hero{padding:43px 0 50px}.hero-grid{grid-template-columns:1fr;gap:35px}.hero h1{font-size:clamp(3rem,13vw,4.2rem)}.hero p{font-size:1rem}.hero-visual{padding-left:13px;padding-bottom:12px}.hero-visual img{height:350px;border-radius:33% 17px 17px 17px}.float-card{left:0;bottom:0}.trustgrid{grid-template-columns:1fr;gap:15px;padding:19px 0}.section{padding:61px 0}.services{grid-template-columns:1fr}.service{padding:24px}.process-grid,.about-grid,.contact-grid{grid-template-columns:1fr}.process-grid{gap:25px}.about-img{height:300px}.contact-intro,.form{padding:25px}.band{padding:56px 0}.footer-inner{align-items:flex-start;flex-direction:column}.wa-float{right:14px;bottom:14px;width:54px;height:54px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+</style>
 </head>
 <body>
-  <div class="topbar"><div class="wrap"><span>Atención cercana para tu mejor descanso</span><span>Santa Cruz de la Sierra · Bolivia</span></div></div>
-  <header class="header">
-    <div class="wrap nav">
-      <a class="brand" href="#inicio" aria-label="Descanso Hogar, inicio"><span class="brand-mark">DH</span><span>Descanso Hogar<small>Tu descanso, nuestra prioridad</small></span></a>
-      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
-      <nav class="navlinks" id="navLinks" aria-label="Navegación principal">
-        <a href="#inicio">Inicio</a><a href="#beneficios">Beneficios</a><a href="#productos">Productos</a><a href="#nosotros">Nosotros</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a>
-      </nav>
-      <a class="btn btn-dark nav-cta wa-link" href="#" target="_blank" rel="noopener">Consultar por WhatsApp ↗</a>
-    </div>
-  </header>
-  <main>
-    <section class="hero" id="inicio">
-      <div class="wrap hero-grid">
-        <div>
-          <span class="eyebrow">Descanso que se siente</span>
-          <h1>Tu hogar merece <em>un mejor descanso.</em></h1>
-          <p>Encuentra colchones y somieres pensados para acompañar tus noches y hacer más cómodos tus días. Te ayudamos a elegir la opción ideal para tu hogar.</p>
-          <div class="actions"><a class="btn btn-dark wa-link" href="#" target="_blank" rel="noopener">Quiero asesoramiento <span>↗</span></a><a class="btn btn-light" href="#productos">Conocer opciones ↓</a></div>
-          <div class="trust"><span class="trust-icon">✦</span><span>Atención personalizada · Opciones para cada hogar</span></div>
-        </div>
-        <div class="hero-photo">
-          <img src="https://images.unsplash.com/photo-1631049307264-da0ec9d70304?auto=format&fit=crop&w=1100&q=85" alt="Dormitorio acogedor con cama preparada" fetchpriority="high">
-          <div class="photo-note"><strong>Descansa mejor.</strong>Elige con tranquilidad, con orientación cercana y amable.</div>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="beneficios">
-      <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Una elección que importa</span><h2>Más comodidad para tu día a día</h2><p>Queremos que encontrar tu próximo colchón sea sencillo, claro y agradable desde el primer contacto.</p></div>
-        <div class="features">
-          <article class="feature"><div class="feature-icon">☁</div><h3>Opciones para ti</h3><p>Te orientamos para que compares alternativas según tus preferencias y las necesidades de tu hogar.</p></article>
-          <article class="feature"><div class="feature-icon">♡</div><h3>Atención cercana</h3><p>Resolvemos tus dudas de manera directa y te acompañamos durante tu consulta.</p></article>
-          <article class="feature"><div class="feature-icon">⌂</div><h3>Para tu hogar</h3><p>Explora opciones para renovar tu dormitorio y crear un espacio más acogedor.</p></article>
-        </div>
-      </div>
-    </section>
-    <section class="section products" id="productos">
-      <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Conoce nuestras opciones</span><h2>Encuentra tu forma de descansar</h2><p>Estas categorías son una referencia inicial. Consulta por WhatsApp para conocer disponibilidad, medidas y precios actuales.</p></div>
-        <div class="product-grid">
-          <article class="product-card"><img src="https://images.unsplash.com/photo-1505693416388-ac5ce068fe85?auto=format&fit=crop&w=900&q=80" alt="Dormitorio con cama y ropa de cama clara" loading="lazy"><div class="product-content"><span class="tag">Comodidad diaria</span><h3>Colchones</h3><p>Conoce las alternativas disponibles y encuentra una opción que se adapte a tus preferencias.</p><a class="text-link wa-link" href="#" target="_blank" rel="noopener">Consultar opciones <span>↗</span></a></div></article>
-          <article class="product-card"><img src="https://images.unsplash.com/photo-1505692952047-1a78307da8f2?auto=format&fit=crop&w=900&q=80" alt="Cama en dormitorio de estilo moderno" loading="lazy"><div class="product-content"><span class="tag">Base para tu cama</span><h3>Somieres y bases</h3><p>Consulta modelos y medidas para completar tu dormitorio con una base adecuada.</p><a class="text-link wa-link" href="#" target="_blank" rel="noopener">Consultar medidas <span>↗</span></a></div></article>
-          <article class="product-card"><img src="https://images.unsplash.com/photo-1616486338812-3dadae4b4ace?auto=format&fit=crop&w=900&q=80" alt="Interior acogedor en tonos neutros" loading="lazy"><div class="product-content"><span class="tag">Tu espacio ideal</span><h3>Soluciones para dormitorio</h3><p>Cuéntanos qué necesitas y te ayudaremos a revisar las opciones disponibles.</p><a class="text-link wa-link" href="#" target="_blank" rel="noopener">Pedir asesoramiento <span>↗</span></a></div></article>
-        </div>
-      </div>
-    </section>
-    <section class="section" id="nosotros">
-      <div class="wrap about-grid">
-        <img class="about-img" src="https://images.unsplash.com/photo-1616486029423-aaa4789e8c9a?auto=format&fit=crop&w=1100&q=85" alt="Dormitorio cálido de estilo contemporáneo" loading="lazy">
-        <div class="about-copy"><span class="eyebrow">Conoce Descanso Hogar</span><h2>Elegir bien empieza con una buena conversación.</h2><p>Somos una tienda dedicada a ayudarte a encontrar colchones y complementos para tu dormitorio. Creemos que una buena atención y la información clara hacen más fácil elegir.</p><p>Escríbenos, cuéntanos qué estás buscando y te orientaremos sobre las alternativas disponibles.</p><ul class="checklist"><li><span class="check">✓</span><span>Orientación amable y personalizada</span></li><li><span class="check">✓</span><span>Información clara sobre medidas y opciones</span></li><li><span class="check">✓</span><span>Contacto directo por WhatsApp</span></li></ul><a class="btn btn-dark wa-link" href="#" target="_blank" rel="noopener">Hablemos de tu descanso ↗</a></div>
-      </div>
-    </section>
-    <section class="quote"><div class="wrap quote-inner"><span class="eyebrow">Estamos para ayudarte</span><h2>El próximo paso hacia un dormitorio más cómodo comienza aquí.</h2><p>Cuéntanos qué necesitas y consulta nuestras opciones sin compromiso.</p><a class="btn" style="background:var(--sand);color:var(--ink)" href="#" id="quoteButton">Consultar por WhatsApp ↗</a></div></section>
-    <section class="section" id="preguntas">
-      <div class="wrap"><div class="section-head"><span class="eyebrow">Resolvemos tus dudas</span><h2>Preguntas frecuentes</h2><p>¿Tienes otra consulta? Escríbenos directamente.</p></div>
-        <div class="faq-grid">
-          <details class="faq-item"><summary>¿Cómo puedo consultar precios?</summary><p>Escríbenos por WhatsApp indicando qué producto y medida buscas. Te responderemos con la información disponible.</p></details>
-          <details class="faq-item"><summary>¿Qué medidas tienen disponibles?</summary><p>Las medidas pueden variar según el modelo. Contáctanos para confirmar las opciones disponibles actualmente.</p></details>
-          <details class="faq-item"><summary>¿Puedo consultar antes de comprar?</summary><p>¡Por supuesto! Puedes hacer tus preguntas y pedir orientación antes de tomar una decisión.</p></details>
-          <details class="faq-item"><summary>¿Realizan entregas a domicilio?</summary><p>Consulta por WhatsApp la disponibilidad de entrega para tu zona y las condiciones vigentes.</p></details>
-        </div>
-      </div>
-    </section>
-    <section class="section contact" id="contacto">
-      <div class="wrap">
-        <div class="section-head"><span class="eyebrow">Hablemos</span><h2>Estamos a un mensaje de distancia</h2><p>Cuéntanos qué estás buscando y te ayudaremos a dar el siguiente paso.</p></div>
-        <div class="contact-grid">
-          <div class="contact-panel"><span class="eyebrow" style="color:var(--sand)">Contacto directo</span><h2>¿Te ayudamos a elegir?</h2><p>Escríbenos por WhatsApp. Te atenderemos para responder tus consultas sobre productos y disponibilidad.</p><div class="contact-list"><div class="contact-row"><span>◉</span><div><b>WhatsApp</b><span>73913409 (número de prueba)</span></div></div><div class="contact-row"><span>⌖</span><div><b>Zona de atención</b><span>Santa Cruz de la Sierra, Bolivia</span></div></div><div class="contact-row"><span>◷</span><div><b>Horario</b><span>Lunes a sábado · 9:00 a 18:00</span></div></div><div class="contact-row"><span>◎</span><div><b>Redes sociales</b><span>Próximamente</span></div></div></div><a class="btn" style="background:var(--sand);color:var(--ink)" href="#" id="contactButton">Abrir WhatsApp ↗</a></div>
-          <form class="contact-form" id="contactForm"><h3>Envíanos tu consulta</h3><p>Completa estos datos y prepararemos un mensaje para WhatsApp.</p><div class="field"><label for="customerName">Tu nombre</label><input id="customerName" name="customerName" autocomplete="name" placeholder="¿Cómo te llamas?" required></div><div class="field"><label for="interest">¿Qué estás buscando?</label><select id="interest" name="interest"><option>Colchón</option><option>Somier o base</option><option>Soluciones para dormitorio</option><option>Otra consulta</option></select></div><div class="field"><label for="message">Tu consulta</label><textarea id="message" name="message" placeholder="Cuéntanos qué necesitas..."></textarea></div><button class="btn btn-dark" type="submit">Continuar por WhatsApp ↗</button><div class="form-note">Este formulario no guarda datos ni envía información por sí solo; abre WhatsApp con el mensaje preparado.</div></form>
-        </div>
-      </div>
-    </section>
-  </main>
-  <footer class="footer"><div class="wrap footer-inner"><div class="brand"><span class="brand-mark" style="background:var(--sand);color:var(--ink)">DH</span><span>Descanso Hogar<small style="color:#c7baaa">Tu descanso, nuestra prioridad</small></span></div><div><div class="footer-links"><a href="#inicio">Inicio</a><a href="#productos">Opciones</a><a href="#preguntas">Preguntas</a><a href="#contacto">Contacto</a></div><p>© <span id="year"></span> Descanso Hogar. Información de demostración.</p></div></div></footer>
-  <a class="wa-float wa-link" href="#" target="_blank" rel="noopener" aria-label="Contactar por WhatsApp" title="Contactar por WhatsApp">☏</a>
-  <div class="toast" id="toast" role="status" aria-live="polite"></div>
-  <script>
-    // DATOS DEL CLIENTE: modifica este bloque para adaptar la plantilla a otro negocio.
-    const BUSINESS = {
-      name: "Descanso Hogar",
-      whatsapp: "59173913409", // Bolivia +591 y el número de prueba 73913409. Ajustar si el número real difiere.
-      defaultMessage: "Hola, vi su página web y quisiera consultar por sus productos.",
-      city: "Santa Cruz de la Sierra, Bolivia"
-    };
-
-    const waUrl = (message = BUSINESS.defaultMessage) =>
-      `https://wa.me/${BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
-
-    document.querySelectorAll(".wa-link").forEach(link => {
-      link.href = waUrl();
-      link.setAttribute("aria-label", `Contactar a ${BUSINESS.name} por WhatsApp`);
-    });
-    document.getElementById("quoteButton").href = waUrl("Hola, vi su página web y quisiera recibir asesoramiento.");
-    document.getElementById("contactButton").href = waUrl("Hola, quisiera hacer una consulta a " + BUSINESS.name + ".");
-    document.getElementById("year").textContent = new Date().getFullYear();
-
-    const menuToggle = document.getElementById("menuToggle");
-    const navLinks = document.getElementById("navLinks");
-    menuToggle.addEventListener("click", () => {
-      const isOpen = navLinks.classList.toggle("open");
-      menuToggle.setAttribute("aria-expanded", String(isOpen));
-      menuToggle.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
-      menuToggle.textContent = isOpen ? "✕" : "☰";
-    });
-    navLinks.querySelectorAll("a").forEach(link => link.addEventListener("click", () => {
-      navLinks.classList.remove("open");
-      menuToggle.setAttribute("aria-expanded", "false");
-      menuToggle.setAttribute("aria-label", "Abrir menú");
-      menuToggle.textContent = "☰";
-    }));
-
-    document.getElementById("contactForm").addEventListener("submit", event => {
-      event.preventDefault();
-      const name = document.getElementById("customerName").value.trim();
-      const interest = document.getElementById("interest").value;
-      const message = document.getElementById("message").value.trim();
-      const text = `Hola, soy ${name}. Vi la página web de ${BUSINESS.name} y quisiera consultar por: ${interest}.${message ? " Mi consulta: " + message : ""}`;
-      window.open(waUrl(text), "_blank", "noopener,noreferrer");
-    });
-
-    // Si una foto externa no carga, muestra un fondo elegante sin romper el diseño.
-    document.querySelectorAll("img").forEach(img => {
-      img.addEventListener("error", () => {
-        img.style.background = "linear-gradient(135deg,#e7dac8,#f8f3eb)";
-        img.style.minHeight = "180px";
-        img.alt = img.alt + " (imagen no disponible)";
-      }, { once: true });
-    });
-  </script>
+<div class="top"><div class="wrap"><span>Servicio técnico con atención cercana</span><span>Santa Cruz de la Sierra · Bolivia</span></div></div>
+<header class="header"><div class="wrap nav">
+<a class="brand" href="#inicio" aria-label="ClimaListo, inicio"><span class="logo">CL</span><span>ClimaListo<small>Climatización sin complicaciones</small></span></a>
+<button class="menu" id="menuBtn" aria-expanded="false" aria-label="Abrir menú">☰</button>
+<nav class="links" id="navLinks" aria-label="Navegación principal"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#nosotros">Nosotros</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></nav>
+<a class="btn btn-primary navcta wa-link" href="#">Solicitar cotización ↗</a>
+</div></header>
+<main>
+<section class="hero" id="inicio"><div class="wrap hero-grid">
+<div><span class="pill"><span class="dot"></span> Atención en Santa Cruz</span>
+<h1>Vuelve a sentir el <span>confort</span> de tu espacio.</h1>
+<p>Instalación, mantenimiento y revisión de aire acondicionado para hogares y pequeños negocios. Cuéntanos qué necesitas y solicita una orientación por WhatsApp.</p>
+<div class="actions"><a class="btn btn-primary wa-link" href="#">Solicitar cotización <span>↗</span></a><a class="btn btn-outline" href="#servicios">Ver servicios ↓</a></div>
+<div class="micro"><span class="micro-icon">✓</span><span>Atención directa · Consultas sin compromiso</span></div>
+</div>
+<div class="hero-visual"><img src="https://images.unsplash.com/photo-1631545806609-7c5e4f4e1f5b?auto=format&fit=crop&w=1100&q=85" alt="Interior moderno y confortable" fetchpriority="high" onerror="this.onerror=null;this.src='https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1100&q=85'"><div class="float-card"><strong>¿El aire no enfría como antes?</strong>Cuéntanos qué sucede y coordinemos una revisión.</div></div>
+</div></section>
+<section class="trustbar"><div class="wrap trustgrid"><div class="trustitem"><span class="trusticon">⌂</span><div><b>Hogar y comercio</b><span>Soluciones para distintos espacios</span></div></div><div class="trustitem"><span class="trusticon">◷</span><div><b>Coordinación sencilla</b><span>Consulta disponibilidad por WhatsApp</span></div></div><div class="trustitem"><span class="trusticon">✓</span><div><b>Información clara</b><span>Conoce el servicio antes de coordinar</span></div></div></div></section>
+<section class="section" id="servicios"><div class="wrap"><div class="heading"><span class="eyebrow">Nuestros servicios</span><h2>Lo que necesitas para estar cómodo</h2><p>Selecciona el servicio que te interesa. El botón te ayudará a enviarnos una consulta concreta, sin formularios complicados.</p></div>
+<div class="services">
+<article class="service"><div class="service-icon">❄</div><h3>Instalación de aire acondicionado</h3><p>Consulta opciones de instalación para tu hogar, oficina o local. Cuéntanos el tipo de equipo y el lugar donde deseas instalarlo.</p><a class="inline-link service-link" data-service="Instalación de aire acondicionado" href="#">Consultar instalación ↗</a></article>
+<article class="service"><div class="service-icon">✳</div><h3>Mantenimiento preventivo</h3><p>Consulta sobre limpieza y mantenimiento para ayudar a conservar el funcionamiento de tu equipo.</p><a class="inline-link service-link" data-service="Mantenimiento preventivo" href="#">Consultar mantenimiento ↗</a></article>
+<article class="service"><div class="service-icon">⌕</div><h3>Revisión y diagnóstico</h3><p>¿El equipo enfría poco, hace ruido o presenta alguna falla? Describe el problema para coordinar una evaluación.</p><a class="inline-link service-link" data-service="Revisión y diagnóstico" href="#">Describir problema ↗</a></article>
+</div></div></section>
+<section class="section process" id="proceso"><div class="wrap process-grid"><div class="process-copy"><span class="eyebrow">Simple y directo</span><h2>De tu consulta a una solución, paso a paso.</h2><p>No necesitas crear una cuenta ni completar una compra en línea. Puedes preguntar primero y decidir después de recibir la información.</p><a class="btn btn-primary wa-link" href="#">Hablar por WhatsApp ↗</a></div><div class="steps">
+<div class="step"><span class="step-num">1</span><div><h3>Cuéntanos qué necesitas</h3><p>Indica si buscas instalación, mantenimiento o revisión, y en qué zona estás.</p></div></div>
+<div class="step"><span class="step-num">2</span><div><h3>Recibe orientación</h3><p>Te preguntaremos los detalles necesarios para entender el trabajo solicitado.</p></div></div>
+<div class="step"><span class="step-num">3</span><div><h3>Coordina los detalles</h3><p>Confirma disponibilidad, precio y condiciones directamente con el negocio antes de aceptar.</p></div></div>
+</div></div></section>
+<section class="section" id="nosotros"><div class="wrap about-grid"><img class="about-img" src="https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1100&q=85" alt="Interior de una vivienda luminosa" loading="lazy"><div class="about"><span class="eyebrow">Sobre ClimaListo</span><h2>Atención clara para tu comodidad diaria.</h2><p>ClimaListo es un negocio de ejemplo creado para mostrar cómo una página puede ayudar a un servicio local a explicar lo que hace y recibir consultas mejor organizadas.</p><p>La idea es facilitar el primer contacto: tú describes lo que necesitas y el negocio te orienta sobre el siguiente paso.</p><ul class="checks"><li><span class="check">✓</span><span>Servicios explicados de forma sencilla</span></li><li><span class="check">✓</span><span>Contacto directo desde celular o computadora</span></li><li><span class="check">✓</span><span>Sin carrito ni registro obligatorio</span></li></ul><a class="btn btn-outline wa-link" href="#">Consultar disponibilidad ↗</a></div></div></section>
+<section class="band"><div class="wrap band-inner"><span class="eyebrow" style="color:var(--lime)">¿Necesitas ayuda con tu equipo?</span><h2>La forma más fácil de empezar es contarnos qué ocurre.</h2><p>Envía tu consulta por WhatsApp. Podrás explicar el trabajo que necesitas antes de coordinar una visita.</p><a class="btn btn-primary wa-link" href="#">Describir mi necesidad ↗</a></div></section>
+<section class="section" id="faq"><div class="wrap"><div class="heading"><span class="eyebrow">Preguntas frecuentes</span><h2>Antes de solicitar el servicio</h2><p>Información inicial para que sepas qué preguntar al contactar.</p></div><div class="faq">
+<details><summary>¿Cómo puedo solicitar una cotización?</summary><p>Pulsa cualquier botón de WhatsApp, indica tu zona y describe el servicio que necesitas. El precio se confirma después de conocer los detalles del trabajo.</p></details>
+<details><summary>¿Atienden mi barrio o zona?</summary><p>La cobertura debe confirmarse directamente con el negocio. En tu mensaje incluye tu barrio o zona de Santa Cruz.</p></details>
+<details><summary>¿Puedo pedir mantenimiento aunque el equipo funcione?</summary><p>Sí, puedes consultar sobre mantenimiento preventivo y preguntar qué incluye el servicio antes de coordinar.</p></details>
+<details><summary>¿La página confirma una cita automáticamente?</summary><p>No. La página abre WhatsApp para que coordines directamente con el negocio. Tu cita solo queda confirmada cuando el negocio te lo indique.</p></details>
+</div></div></section>
+<section class="section contact" id="contacto"><div class="wrap"><div class="heading"><span class="eyebrow">Contacto</span><h2>Cuéntanos qué necesita tu espacio</h2><p>Completa el formulario y se abrirá WhatsApp con tu mensaje preparado.</p></div><div class="contact-grid">
+<div class="contact-intro"><span class="eyebrow" style="color:var(--lime)">Contacto directo</span><h2>Hablemos de tu equipo.</h2><p>Describe tu necesidad y te ayudaremos a identificar qué información hace falta para consultar el servicio.</p><div class="details"><div class="detail"><span class="symbol">☏</span><div><b>WhatsApp</b><span>73913409 · número de prueba</span></div></div><div class="detail"><span class="symbol">⌖</span><div><b>Zona</b><span>Santa Cruz de la Sierra, Bolivia</span></div></div><div class="detail"><span class="symbol">◷</span><div><b>Horario de ejemplo</b><span>Lunes a sábado, 8:30–18:00</span></div></div></div><a class="btn btn-primary wa-link" href="#">Abrir WhatsApp ↗</a></div>
+<form class="form" id="leadForm"><h3>Preparar una consulta</h3><p>Solo se usarán los datos para preparar el mensaje; esta página no los guarda.</p>
+<div class="field"><label for="name">Tu nombre</label><input id="name" name="name" autocomplete="name" placeholder="Ej.: Carlos" required maxlength="80"></div>
+<div class="field"><label for="service">¿Qué servicio necesitas?</label><select id="service" name="service"><option>Instalación de aire acondicionado</option><option>Mantenimiento preventivo</option><option>Revisión y diagnóstico</option><option>Otra consulta</option></select></div>
+<div class="field"><label for="zone">Tu barrio o zona</label><input id="zone" name="zone" placeholder="Ej.: Equipetrol, Plan 3000..." maxlength="100"></div>
+<div class="field"><label for="details">Describe brevemente lo que necesitas</label><textarea id="details" name="details" placeholder="Tipo de equipo, problema, cuándo te gustaría coordinar..."></textarea></div>
+<button class="btn btn-primary" type="submit">Preparar mensaje en WhatsApp ↗</button><div class="note">Al pulsar, se abrirá WhatsApp en otra pestaña. Revisa el mensaje y envíalo tú. No se envía automáticamente.</div></form>
+</div></div></section>
+</main>
+<footer class="footer"><div class="wrap footer-inner"><a class="brand" href="#inicio"><span class="logo">CL</span><span>ClimaListo<small style="color:#a9bdb2">Climatización sin complicaciones</small></span></a><div><div class="footerlinks"><a href="#servicios">Servicios</a><a href="#proceso">Cómo trabajamos</a><a href="#faq">Preguntas</a><a href="#contacto">Contacto</a></div><p>© <span id="year"></span> ClimaListo. Demo comercial con datos ficticios.</p></div></div></footer>
+<a class="wa-float wa-link" href="#" aria-label="Contactar por WhatsApp" title="Contactar por WhatsApp">☏</a>
+<script>
+/* DATOS DEL NEGOCIO: este es el bloque principal que la IA debe adaptar por cliente. */
+const BUSINESS = {
+  name: "ClimaListo",
+  whatsapp: "59173913409", // Solo dígitos, con código de país. Bolivia: 591 + número.
+  defaultMessage: "Hola, vi su página web y quisiera consultar por sus servicios.",
+  city: "Santa Cruz de la Sierra, Bolivia"
+};
+function whatsappUrl(message) {
+  return "https://wa.me/" + BUSINESS.whatsapp + "?text=" + encodeURIComponent(message);
+}
+document.querySelectorAll(".wa-link").forEach(a => {
+  a.href = whatsappUrl(BUSINESS.defaultMessage);
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  a.addEventListener("click", () => track("whatsapp_click", {location: a.closest("section")?.id || "navigation"}));
+});
+document.querySelectorAll(".service-link").forEach(a => {
+  const service = a.dataset.service;
+  a.href = whatsappUrl("Hola, vi la página de " + BUSINESS.name + " y quisiera consultar por: " + service + ".");
+  a.target = "_blank";
+  a.rel = "noopener noreferrer";
+  a.addEventListener("click", () => track("service_click", {service}));
+});
+const menuBtn = document.getElementById("menuBtn");
+const nav = document.getElementById("navLinks");
+menuBtn.addEventListener("click", () => {
+  const open = nav.classList.toggle("open");
+  menuBtn.setAttribute("aria-expanded", String(open));
+  menuBtn.setAttribute("aria-label", open ? "Cerrar menú" : "Abrir menú");
+  menuBtn.textContent = open ? "✕" : "☰";
+});
+nav.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+  nav.classList.remove("open"); menuBtn.setAttribute("aria-expanded","false");
+  menuBtn.setAttribute("aria-label","Abrir menú"); menuBtn.textContent = "☰";
+}));
+document.getElementById("year").textContent = new Date().getFullYear();
+document.getElementById("leadForm").addEventListener("submit", e => {
+  e.preventDefault();
+  const name = document.getElementById("name").value.trim();
+  const service = document.getElementById("service").value;
+  const zone = document.getElementById("zone").value.trim();
+  const details = document.getElementById("details").value.trim();
+  const parts = ["Hola, soy " + name + ".", "Vi la página web de " + BUSINESS.name + " y quisiera consultar por " + service + "."];
+  if (zone) parts.push("Mi zona es: " + zone + ".");
+  if (details) parts.push("Detalles: " + details);
+  parts.push("¿Podrían indicarme disponibilidad y precio aproximado?");
+  track("lead_form_submit", {service});
+  window.open(whatsappUrl(parts.join(" ")), "_blank", "noopener,noreferrer");
+});
+/* Analítica local opcional: no envía datos a ningún servidor. */
+function track(eventName, details) {
+  try {
+    const key = "climalisto_demo_events";
+    const old = JSON.parse(localStorage.getItem(key) || "[]");
+    old.push({event:eventName, details, at:new Date().toISOString()});
+    localStorage.setItem(key, JSON.stringify(old.slice(-200)));
+  } catch(e) {}
+}
+/* Permite revisar eventos de prueba desde la consola del navegador: demoEvents() */
+window.demoEvents = function(){ try { return JSON.parse(localStorage.getItem("climalisto_demo_events") || "[]"); } catch(e){ return []; } };
+</script>
 </body>
 </html>
